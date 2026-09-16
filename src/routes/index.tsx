@@ -25,7 +25,7 @@ export const Route = createFileRoute("/")({
 function Home() {
   return (
     <iframe
-      src="/loja/index.html"
+      src="./loja/index.html"
       title="Doceria Sweet by Lolô"
       allow="clipboard-write"
       style={{
