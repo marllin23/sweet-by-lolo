@@ -2575,17 +2575,14 @@
 
            // WhatsApp desativado na versão de demonstração/portfólio
          // Enviar direto para o WhatsApp da loja
-const msg = buildWhatsappMessage(orderData);
-let numero = String(config.whatsapp || '').replace(/\D/g, '');
-if (numero.startsWith('55')) numero = numero.slice(2);
-const waUrl = `https://wa.me/55${numero}?text=${encodeURIComponent(msg)}`;
-
 const waLink = document.getElementById('success-wa-link');
-if (waLink) {
-    waLink.setAttribute('href', waUrl);
-    waLink.innerHTML = '<i class="fab fa-whatsapp"></i> Enviar pedido no WhatsApp';
-}
 
+if (waLink) {
+    waLink.removeAttribute('href');
+    waLink.innerHTML = '<i class="fab fa-whatsapp"></i> WhatsApp — Demonstração';
+    waLink.style.pointerEvents = 'none';
+    waLink.style.opacity = '0.6';
+}
 // WhatsApp desativado na versão de demonstração
             }
 
