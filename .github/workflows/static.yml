@@ -34,13 +34,17 @@ jobs:
       - name: Gerar site
         run: npm run build
 
+      - name: Redirecionar para loja
+        run: |
+          echo '<!DOCTYPE html><html><head><meta http-equiv="refresh" content="0; url=./loja/"></head><body></body></html>' > ./.output/public/index.html
+
       - name: Configurar Pages
         uses: actions/configure-pages@v5
 
       - name: Fazer upload do site
         uses: actions/upload-pages-artifact@v3
         with:
-          path:  ./.output/public
+          path: ./.output/public
 
   deploy:
     environment:
