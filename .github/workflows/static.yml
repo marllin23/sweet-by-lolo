@@ -40,7 +40,7 @@ jobs:
       - name: Fazer upload do site
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./dist
+          path:  ./.output/public
 
   deploy:
     environment:
