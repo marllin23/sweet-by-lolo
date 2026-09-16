@@ -11,6 +11,10 @@ permissions:
   pages: write
   id-token: write
 
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -22,11 +26,10 @@ jobs:
       - name: Configurar Node
         uses: actions/setup-node@v4
         with:
-          node-version: 20
-          cache: npm
+          node-version: 24
 
       - name: Instalar dependências
-        run: npm ci
+        run: npm install
 
       - name: Gerar site
         run: npm run build
@@ -48,6 +51,6 @@ jobs:
     needs: build
 
     steps:
-      - name: Publicar
+      - name: Publicar site
         id: deployment
         uses: actions/deploy-pages@v4
