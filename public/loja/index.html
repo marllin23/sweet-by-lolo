@@ -1326,9 +1326,9 @@
                     <h1 class="welcome-text">
                         <span class="emoji">😋</span> Bem vindos
                     </h1>
-                    <a href="https://instagram.com/sweet.bylolo" class="insta-handle" target="_blank" rel="noopener">
-                        <i class="fab fa-instagram"></i> @sweet.bylolo
-                    </a>
+                   <a href="#" class="insta-handle" onclick="return false;" aria-label="Instagram">
+    <i class="fab fa-instagram"></i> Instagram — Demonstração
+</a>
                     <div class="service-tags">
                         <span class="service-tag">
                             <i class="fas fa-shopping-bag"></i> Retirada
@@ -1351,8 +1351,8 @@
                         <i class="fas fa-file-pdf"></i> Catálogo em PDF
                     </button>
                     
-                    <a href="https://wa.me/5521970651590" class="main-btn btn-whatsapp" target="_blank">
-                        <i class="fab fa-whatsapp"></i> WhatsApp
+                    <a href="#" class="main-btn btn-whatsapp" onclick="return false;">
+                        <i class="fab fa-whatsapp"></i> Falar pelo WhatsApp
                     </a>
                     
                     <button class="main-btn btn-pink-outline" onclick="showPage('horarios')">
@@ -1368,12 +1368,12 @@
                     <a href="#" onclick="showPage('horarios')">Horários</a>
                 </div>
                 <div class="social-links">
-                    <a href="https://wa.me/5521970651590" class="social-wa" target="_blank" aria-label="WhatsApp">
+                   <a href="#" class="social-wa" aria-label="WhatsApp">
                         <i class="fab fa-whatsapp"></i>
                     </a>
-                    <a href="https://instagram.com/sweet.bylolo" class="social-ig" target="_blank" rel="noopener" aria-label="Instagram">
-                        <i class="fab fa-instagram"></i>
-                    </a>
+                  <a href="#" class="social-ig" aria-label="Instagram" onclick="return false;">
+    <i class="fab fa-instagram"></i>
+</a>
                 </div>
                 <p style="margin-top:10px;">@sweet.bylolo</p>
             </div>
@@ -1461,7 +1461,7 @@
                             <div class="phone-prefix">
                                 <span>🇧🇷 +55</span>
                             </div>
-                            <input type="tel" id="customer-phone" placeholder="(21) 97065-1590" maxlength="15">
+                            <input type="tel" id="customer-phone" placeholder="(00) 00000-0000" maxlength="15">
                         </div>
                     </div>
                     <button class="btn-primary" onclick="goToStep2()">
@@ -1595,7 +1595,8 @@
                         <button type="button" class="btn-secondary" style="margin-top: 0;" onclick="copyPix()">
                             <i class="fas fa-copy"></i> Copiar código PIX
                         </button>
-                        <p class="pix-name">Recebedor: <strong>Eloah Benigno Reis Ferreira</strong></p>
+                        <p class="pix-name">Recebedor: <strong>Sweet by Lolô — DEMONSTRAÇÃO</strong></p>
+                           <p>PIX ilustrativo — pagamentos desativados.</p>
                     </div>
 
                     <div class="troco-group" id="troco-group" style="display: none;">
@@ -1660,9 +1661,9 @@
                             Se o WhatsApp não abrir sozinho, fale com a gente:
                         </p>
 
-                        <a href="https://wa.me/5521970651590" id="success-wa-link" class="whatsapp-btn" target="_blank" rel="noopener">
-                            <i class="fab fa-whatsapp"></i> (21) 97065-1590
-                        </a>
+                        <a href="#" id="success-wa-link" class="whatsapp-btn" onclick="return false;">
+    <i class="fab fa-whatsapp"></i> WhatsApp — Demonstração
+</a>
 
                         <button class="btn-secondary" onclick="closeSuccess()" style="margin-top: 20px;">
                             Fazer novo pedido
@@ -1749,7 +1750,7 @@
                     </div>
                     <div class="form-group">
                         <label>Endereço da loja</label>
-                        <input type="text" id="config-address" value="Rua Projetada F, 11 A">
+                     <input type="text" id="config-address" value="Endereço de demonstração">
                     </div>
                     <div class="form-group">
                         <label>Taxa até 3 km (R$)</label>
@@ -1769,7 +1770,7 @@
                     <h3><i class="fas fa-store"></i> Loja</h3>
                     <div class="form-group">
                         <label>WhatsApp (só números, com DDD)</label>
-                        <input type="text" id="config-whatsapp" value="21970651590">
+                       <input type="text" id="config-whatsapp" value="00000000000">
                     </div>
                     <button class="save-btn" onclick="saveConfig()">
                         <i class="fas fa-save"></i> Salvar
@@ -1821,7 +1822,7 @@
         }
 
         // ==================== CÓDIGO PIX (COPIA E COLA) ====================
-        const PIX_CODE = "00020126360014BR.GOV.BCB.PIX0114+55219706515905204000053039865802BR5925Eloah Benigno Reis Ferrei6009SAO PAULO62140510Byoab47bAN630439AE";
+      const PIX_CODE = "PIX_DEMONSTRACAO";
 
         // ==================== PRODUTOS ====================
         let products = [
@@ -1903,15 +1904,15 @@
         let selectedDistance = 3;
 
         let config = {
-            deliveryFee: 5.00,
-            whatsapp: "21970651590",
-            deliveryMode: "proprio",       // 'proprio' ou 'apps'
-            storeAddress: "Rua Projetada F, 11 A",
-            fee1: 5.00,   // até 3 km
-            fee2: 7.00,   // 4 a 6 km
-            fee3: 10.00,  // 7 km ou mais
-            forceClosed: false,
-            forceClosedDate: null
+          deliveryFee: 5.00,
+          whatsapp: "00000000000",
+          deliveryMode: "proprio",       // 'proprio' ou 'apps'
+          storeAddress: "Endereço fictício — site demonstrativo",,
+          fee1: 5.00,   // até 3 km
+          fee2: 7.00,   // 4 a 6 km
+          fee3: 10.00,  // 7 km ou mais
+          forceClosed: false,
+          forceClosedDate: null
         };
 
         function isDelivery(service) {
@@ -2141,8 +2142,7 @@
             doc.setFontSize(10);
             doc.setTextColor(150);
             doc.text('Sweet by Lolô - @sweet.bylolo', 105, 280, { align: 'center' });
-            doc.text('WhatsApp: (21) 97065-1590', 105, 285, { align: 'center' });
-
+         doc.text('WhatsApp: Demonstração', 105, 285, { align: 'center' });
             doc.save('sweet-by-lolo-cardapio.pdf');
             showNotification('PDF baixado com sucesso!');
         }
